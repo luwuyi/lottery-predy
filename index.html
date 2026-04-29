@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>抽奖活动</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100vw;
+        height: 100vh;
+        background: #111;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      /*
+       * iPhone 14 比例：390 × 844
+       * 不覆盖 canvas 尺寸，避免坐标空间错位导致点击失效。
+       */
+      #predy-container {
+        width: min(390px, calc(100vh * 390 / 844));
+        height: min(844px, 100vh);
+        background: #000;
+        flex-shrink: 0;
+      }
+    </style>
+    <script type="module" crossorigin src="/lottery-predy/assets/index-BBLhmj--.js"></script>
+  </head>
+  <body>
+    <div id="predy-container"></div>
+  </body>
+</html>
